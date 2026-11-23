@@ -3,50 +3,49 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         // 1. BMI calculator
-        System.out.print("Enter weight (kg): ");
-        double weight = scanner.nextDouble();
-        System.out.print("Enter height (m): ");
-        double height = scanner.nextDouble();
-        double bmi = weight / (height * height);
-        System.out.printf("BMI = %.2f%n%n", bmi);
+        System.out.println("Enter your weight : ");
+        double weight = input.nextDouble();
+        System.out.println("Enter your height :");
+        double height = input.nextDouble();
+        double BMI = weight / (height * height);
+        System.out.println("your BMI is :" + BMI);
 
         // 2. Percentage calculator
         System.out.print("Enter obtained marks: ");
-        double obtained = scanner.nextDouble();
+        double obtained = input.nextDouble();
         System.out.print("Enter total marks: ");
-        double total = scanner.nextDouble();
+        double total = input.nextDouble();
         double percentage = (obtained / total) * 100;
         System.out.println("Percentage = " + percentage + "%\n");
 
         // 3. Currency converter
         System.out.print("Enter amount in USD: ");
-        double usd = scanner.nextDouble();
+        double usd = input.nextDouble();
         System.out.print("Enter exchange rate (USD to EUR): ");
-        double rate = scanner.nextDouble();
+        double rate = input.nextDouble();
         double eur = usd * rate;
         System.out.println("Amount in EUR = " + eur + "\n");
-        scanner.nextLine(); // consume leftover newline before reading full lines
+      input.nextLine() ;
 
         // 4. String length and reverse
         System.out.print("Enter a string: ");
-        String text = scanner.nextLine();
+        String text = input.nextLine();
         String reversed = new StringBuilder(text).reverse().toString();
         System.out.println("Length of the string: " + text.length());
         System.out.println("Reversed string: \"" + reversed + "\"\n");
 
         // 5. Substring extraction
         System.out.print("Enter a sentence: ");
-        String sentence = scanner.nextLine();
+        String sentence = input.nextLine();
         System.out.print("Enter start index: ");
-        int start = scanner.nextInt();
+        int start = input.nextInt();
         System.out.print("Enter end index: ");
-        int end = scanner.nextInt();
+        int end = input.nextInt();
         String extracted = sentence.substring(start, end).trim();
         System.out.println("Extracted substring: \"" + extracted + "\"");
 
-        scanner.close();
     }
 }
