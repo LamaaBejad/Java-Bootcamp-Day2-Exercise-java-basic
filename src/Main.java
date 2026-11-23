@@ -28,7 +28,7 @@ public class Main {
         double rate = input.nextDouble();
         double eur = usd * rate;
         System.out.println("Amount in EUR = " + eur + "\n");
-      input.nextLine() ;
+        input.nextLine() ;
 
         // 4. String length and reverse
         System.out.print("Enter a string: ");
